@@ -4,7 +4,7 @@ import FacebookButtons from './FacebookButtons'
 
 const FacebookComponent = () => {
   return (
-    <div className='' id='instagram'>
+    <div className='' id='facebook'>
       <div className='p-1 justify-center flex mt-5'>
         {facebook}
       </div>
