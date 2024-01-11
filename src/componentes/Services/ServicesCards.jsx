@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ServicesCards = ({ to, svg, title, buttons }) => {
   return (
@@ -7,7 +6,7 @@ const ServicesCards = ({ to, svg, title, buttons }) => {
         {svg}
       </a>
       <div className="p-5">
-        <a href="#">
+        <a href="/services/facebook">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-center text-gray-900 dark:text-white">
             {title}
           </h5>
