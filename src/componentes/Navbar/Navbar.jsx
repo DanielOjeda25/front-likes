@@ -3,7 +3,7 @@ import NavLink from './NavLink';
 const Navbar = () => {
 
   return (
-    <nav className="bg-red-300 border-gray-200 dark:bg-gray-900 dark:border-gray-700 shadow-sm w-full">
+    <nav id='home' className="bg-red-300 border-gray-200 dark:bg-gray-900 dark:border-gray-700 shadow-sm w-full">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
@@ -113,11 +113,11 @@ const Navbar = () => {
 
               </div>
             </li>
-            <li>
+            {/*  <li>
               <NavLink to="/blog">
                 Blog
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="/faq">
                 FAQ
