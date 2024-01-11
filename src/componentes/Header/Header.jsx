@@ -1,17 +1,15 @@
-import React from 'react';
-
 const Header = () => {
   return (
-    <header className='bg-red-300 w-full justify-center items-center flex flex-col h-3/6 py-3'>
-      <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">
+    <header className='bg-red-400 w-full justify-center items-center flex flex-col h-3/4 py-3'>
+      <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white text-center">
         Boost Your Social Presence with SMM Matrix
       </h1>
       <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
         Unlock the power of social media! At SMM Matrix, we specialize in strategies that elevate your online presence, drive engagement, and help you reach new heights in the digital landscape.
       </p>
       <a
-        href="#"
-        className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+        href="#services"
+        className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-red-500 hover:bg-red-900 rounded "
       >
         Explore Our Services
         <svg

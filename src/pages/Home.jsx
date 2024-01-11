@@ -4,7 +4,7 @@ import ServicesGrid from '../componentes/Services/ServicesGrid'
 
 const Home = () => {
   return (
-    <main className='w-full bg-slate-900'>
+    <main className='w-full'>
       <NavbarHome />
       <div className="flex flex-col items-center">
         <Header />
