@@ -1,0 +1,138 @@
+import NavLink from './NavLink';
+
+const Navbar = () => {
+
+  return (
+    <nav className="bg-red-300 border-gray-200 dark:bg-gray-900 dark:border-gray-700 w-full">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img
+            src="/vite.svg"
+            className="h-8"
+            alt="logo"
+          />
+          <span className="self-center text-2xl font-semibold italic whitespace-nowrap text-white ">
+            SMM Matrix
+          </span>
+        </a>
+        <button
+          data-collapse-toggle="navbar-dropdown"
+          type="button"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-dropdown"
+          aria-expanded="false"
+        >
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div className="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-red-300 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 ">
+            <li>
+              <NavLink to="/">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <button
+                id="dropdownNavbara"
+                data-dropdown-toggle="dropdownNavbar"
+                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:text-white hover:text-red-500 hover:bg-red-300 md:hover:bg-red-500 md:border-0 md:hover:text-white md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-100 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+              >
+                Services
+                <svg
+                  className="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <div
+                id="dropdownNavbar"
+                className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              >
+                <ul
+                  className="py-2 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="/services/instagram"
+                      className="block px-4 py-2 hover:bg-red-500 hover:text-white dark:hover:bg-red-500 dark:hover:text-white"
+                    >
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/services/twitter"
+                      className="block px-4 py-2 hover:bg-red-500 hover:text-white dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/services/youtube"
+                      className="block px-4 py-2 hover:bg-red-500 hover:text-white dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Youtube
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/services/facebook"
+                      className="block px-4 py-2 hover:bg-red-500 hover:text-white dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </li>
+            <li>
+              <NavLink to="/blog">
+                Blog
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/faq">
+                FAQ
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;
