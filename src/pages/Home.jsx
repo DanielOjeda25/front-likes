@@ -1,9 +1,15 @@
+import Header from '../componentes/Header/Header'
 import NavbarHome from '../componentes/Navbar/Navbar'
+import ServicesGrid from '../componentes/Services/ServicesGrid'
 
 const Home = () => {
   return (
-    <main >
+    <main className='w-full bg-slate-900'>
       <NavbarHome />
+      <div className="flex flex-col items-center">
+        <Header />
+        <ServicesGrid />
+      </div>
     </main>
   )
 }
