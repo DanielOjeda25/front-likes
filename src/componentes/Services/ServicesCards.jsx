@@ -17,7 +17,7 @@ const ServicesCards = ({ to, svg, title, buttons }) => {
             <a
               key={index}
               href={button.link}
-              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-500 hover:bg-red-900 rounded my-2"
+              className="inline-flex items-center px-3 py-2 font-normal text-center text-white bg-red-500 hover:bg-red-900 rounded my-2"
             >
               {button.text}
               {button.icon && (
