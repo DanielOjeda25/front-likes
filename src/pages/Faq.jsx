@@ -1,16 +1,21 @@
+import FAQItem from '../componentes/Faq/faq'
+import faqData from '../componentes/Faq/faqdata'
 import Footer from '../componentes/Footer/Footer'
-import Header from '../componentes/Header/Header'
+import HeaderFAQ from '../componentes/Header/HeaderFAQ'
 import Navbar from '../componentes/Navbar/Navbar'
-import ServicesGrid from '../componentes/Services/ServicesGrid'
 
 const Faq = () => {
   return (
     <div className='w-full'>
-      faq
       <Navbar />
       <div className="flex flex-col items-center">
-        <Header />
-        <ServicesGrid />
+        <HeaderFAQ />
+        <div className=' w-full mt-5 mx-6'>
+          {faqData.map((item, index) => (
+            <FAQItem key={index} pregunta={item.pregunta} respuesta={item.respuesta} />
+          ))}
+        </div>
+
         <Footer />
       </div>
     </div>

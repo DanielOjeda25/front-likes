@@ -1,4 +1,5 @@
 import NavLink from './NavLink';
+import LanguageSelector from '../Lenguaje/LenguajeSelector';
 
 const Navbar = () => {
 
@@ -127,6 +128,7 @@ const Navbar = () => {
                 Contact
               </NavLink>
             </li>
+            <LanguageSelector />
           </ul>
         </div>
       </div>
