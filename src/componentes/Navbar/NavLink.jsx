@@ -6,7 +6,7 @@ const NavLink = ({ to, children }) => {
   return (
     <a
       href={to}
-      className={`block py-2 px-3 text-gray-900 hover:text-white hover:bg-red-500 ${location.pathname === to ? 'text-orange-500 border-b-2 border-orange-700' : 'md:hover:bg-red-500 md:hover:text-white '
+      className={`block py-2 px-3 text-gray-900 hover:text-white hover:bg-red-500 ${location.pathname === to ? 'text-orange-300 border-b-2 border-orange-300' : 'md:hover:bg-red-500 md:hover:text-white '
         } rounded md:bg-transparent md:text-white md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent hover:bg-red-300`}
       aria-current={location.pathname === to ? 'page' : undefined}
     >

@@ -3,7 +3,7 @@ import NavLink from './NavLink';
 const Navbar = () => {
 
   return (
-    <nav id='home' className="bg-red-300 border-gray-200 dark:bg-gray-900 dark:border-gray-700 shadow-sm w-full">
+    <nav id='home' className="bg-gradient-to-r from-pink-500 to-red-500 border-gray-200 dark:bg-gray-900 dark:border-gray-700 shadow-sm w-full">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
@@ -40,7 +40,7 @@ const Navbar = () => {
           </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-red-300 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 ">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg from-pink-500 to-red-500 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:from-pink-500 md:to-red-500 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 ">
             <li>
               <NavLink to="/">
                 Home
@@ -110,7 +110,6 @@ const Navbar = () => {
                     </a>
                   </li>
                 </ul>
-
               </div>
             </li>
             {/*  <li>
