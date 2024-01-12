@@ -3,9 +3,13 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const languageSlice = createSlice({
   name: 'language',
-  initialState: 'es', // Establece el idioma predeterminado
+  initialState: localStorage.getItem('language') || 'es', // Obtener del almacenamiento local o establecer como 'es'
   reducers: {
-    toggleLanguage: (state) => (state === 'es' ? 'en' : 'es'),
+    toggleLanguage: (state) => {
+      const newLanguage = state === 'es' ? 'en' : 'es';
+      localStorage.setItem('language', newLanguage); // Almacenar en el almacenamiento local
+      return newLanguage;
+    },
   },
 });
 

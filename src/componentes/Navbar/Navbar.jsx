@@ -1,10 +1,36 @@
 import NavLink from './NavLink';
 import LanguageSelector from '../Lenguaje/LenguajeSelector';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+  const language = useSelector((state) => state.language);
 
+  const translations = {
+    es: {
+      home: 'Inicio',
+      services: 'Servicios',
+      instagram: 'Instagram',
+      twitter: 'Twitter',
+      youtube: 'Youtube',
+      facebook: 'Facebook',
+      faq: 'Preguntas frecuentes',
+      contact: 'Contacto',
+    },
+    en: {
+      home: 'Home',
+      services: 'Services',
+      instagram: 'Instagram',
+      twitter: 'Twitter',
+      youtube: 'Youtube',
+      facebook: 'Facebook',
+      faq: 'FAQ',
+      contact: 'Contact',
+    },
+    // Agrega más idiomas según sea necesario
+  };
+  const translation = translations[language] || translations.en;
   return (
-    <nav id='home' className="bg-gradient-to-r from-pink-500 to-red-500 border-gray-200 dark:bg-gray-900 dark:border-gray-700 shadow-sm w-full">
+    <nav id='home' className="bg-gray-900 text-white shadow-md">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
@@ -44,16 +70,16 @@ const Navbar = () => {
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg from-pink-500 to-red-500 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:from-pink-500 md:to-red-500 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 ">
             <li>
               <NavLink to="/">
-                Home
+                {translation.home}
               </NavLink>
             </li>
             <li>
               <button
                 id="dropdownNavbara"
                 data-dropdown-toggle="dropdownNavbar"
-                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:text-white hover:text-red-500 hover:bg-red-300 md:hover:bg-red-500 md:border-0 md:hover:text-white md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-100 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                className="flex items-center justify-between w-full py-2 px-3 text-white rounded md:text-white hover:text-white hover:bg-red-500 md:hover:bg-red-500 md:border-0 md:hover:text-white md:p-0 md:w-auto "
               >
-                Services
+                {translation.services}
                 <svg
                   className="w-2.5 h-2.5 ms-2.5"
                   aria-hidden="true"
@@ -120,12 +146,12 @@ const Navbar = () => {
             </li> */}
             <li>
               <NavLink to="/faq">
-                FAQ
+                {translation.faq}
               </NavLink>
             </li>
             <li>
               <NavLink to="/contact">
-                Contact
+                {translation.contact}
               </NavLink>
             </li>
             <LanguageSelector />

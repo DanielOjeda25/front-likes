@@ -5,7 +5,7 @@ const Header = () => {
   const isSpanish = language === 'es';
 
   return (
-    <header className='bg-gradient-to-r from-pink-500 to-red-500 w-full justify-center items-center flex flex-col h-3/4 py-5'>
+    <header className='bg-gray-900 text-white shadow-md w-full justify-center items-center flex flex-col h-3/4 py-5'>
       <h1 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white text-center">
         {isSpanish
           ? 'Potencia tu presencia en redes sociales con SMM Matrix'

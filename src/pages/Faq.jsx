@@ -11,9 +11,7 @@ const Faq = () => {
       <div className="flex flex-col items-center">
         <HeaderFAQ />
         <div className=' w-full mt-5 mx-6'>
-          {faqData.map((item, index) => (
-            <FAQItem key={index} pregunta={item.pregunta} respuesta={item.respuesta} />
-          ))}
+          <FAQItem />
         </div>
 
         <Footer />

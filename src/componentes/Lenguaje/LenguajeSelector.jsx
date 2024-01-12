@@ -1,3 +1,4 @@
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleLanguage } from '../Navbar/Hook/lenguajeSlice';
 
@@ -5,9 +6,15 @@ const LanguageSelector = () => {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language);
 
-  const handleLanguageToggle = () => {
-    dispatch(toggleLanguage());
+  const handleLanguageToggle = (event) => {
+    const newLanguage = event.target.value;
+    dispatch(toggleLanguage(newLanguage));
   };
+
+  // Use useEffect to update localStorage when the language changes
+  React.useEffect(() => {
+    localStorage.setItem('language', language);
+  }, [language]);
 
   return (
     <li>
