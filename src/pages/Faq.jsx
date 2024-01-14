@@ -12,7 +12,6 @@ const Faq = () => {
         <div className=' w-full mt-5 mx-6'>
           <FAQItem />
         </div>
-
         <Footer />
       </div>
     </div>

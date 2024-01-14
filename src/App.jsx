@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
-import Faq from "./pages/faq";
 import Contact from "./pages/Contact";
 import Instagram from "./pages/services/Instagram";
 import Facebook from "./pages/services/Facebook";
 import Twitter from "./pages/services/Twitter";
 import Youtube from "./pages/services/Youtube";
+import Faq from "./pages/faq";
 
 const router = createBrowserRouter([
   {
