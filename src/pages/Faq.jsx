@@ -1,5 +1,4 @@
 import FAQItem from '../componentes/Faq/faq'
-import faqData from '../componentes/Faq/faqdata'
 import Footer from '../componentes/Footer/Footer'
 import HeaderFAQ from '../componentes/Header/HeaderFAQ'
 import Navbar from '../componentes/Navbar/Navbar'
