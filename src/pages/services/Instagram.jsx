@@ -10,7 +10,6 @@ const Instagram = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Realizar la solicitud al cargar el componente
     dispatch(fetchInstagramServices());
   }, [dispatch]);
 

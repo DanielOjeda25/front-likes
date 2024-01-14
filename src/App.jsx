@@ -7,6 +7,7 @@ import Facebook from "./pages/services/Facebook";
 import Twitter from "./pages/services/Twitter";
 import Youtube from "./pages/services/Youtube";
 import Preguntas from "./pages/faq";
+import ComprarInstagram from "./pages/services/ComprarInstagram";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/services/instagram",
     element: <Instagram />
+  },
+  {
+    path: "/services/instagram/comprar/:serviceId",
+    element: <ComprarInstagram />
   },
   {
     path: "/services/facebook",
