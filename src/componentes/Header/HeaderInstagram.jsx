@@ -30,7 +30,7 @@ const HeaderInstagram = () => {
         {subtitle}
       </p>
       <a
-        href="#instagram"
+        href="#tabla"
         className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-pink-600 hover:bg-pink-900 rounded "
       >
         {buttonText}
