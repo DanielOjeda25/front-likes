@@ -7,11 +7,11 @@ import { useEffect } from 'react'
 import { fetchInstagramServices } from './Hooks/serviciosInstagram'
 
 const Instagram = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchInstagramServices());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchInstagramServices());
+  // }, [dispatch]);
 
   return (
     <div className='w-full '>
