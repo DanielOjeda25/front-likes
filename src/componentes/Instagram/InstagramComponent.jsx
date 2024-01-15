@@ -8,7 +8,7 @@ const InstagramComponent = () => {
   return (
     <div className='' id='instagram'>
       <div className="mt-5">
-        {/* <InstagramServicesTable services={instagramServices} /> */}
+        <InstagramServicesTable services={instagramServices} />
       </div>
     </div>
   )
