@@ -1,0 +1,46 @@
+// twitterSlice.js
+import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
+import { API_CALCULAR } from '../../../config';
+
+const initialState = {
+  selectedService: null,
+  cantidad: '',
+  finalPrice: null,
+};
+
+const twitterSlice = createSlice({
+  name: 'twitter',
+  initialState,
+  reducers: {
+    selectService: (state, action) => {
+      state.selectedService = action.payload;
+    },
+    setCantidad: (state, action) => {
+      state.cantidad = action.payload;
+    },
+    setFinalPrice: (state, action) => {
+      state.finalPrice = action.payload;
+    },
+  },
+});
+
+export const { selectService, setCantidad, setFinalPrice } = twitterSlice.actions;
+export const selectSelectedService = (state) => state.twitter.selectedService;
+export const selectCantidad = (state) => state.twitter.cantidad;
+export const selectFinalPrice = (state) => state.twitter.finalPrice;
+
+// Thunk para realizar la petición
+export const calcularPrecioAsync = (service, cantidad) => async (dispatch, getState) => {
+  try {
+    const response = await axios.get(
+      `${API_CALCULAR}/calculated-price?id-service=${service}&quantity=${cantidad}`
+    );
+
+    dispatch(setFinalPrice(response.data.price));
+  } catch (error) {
+    console.error('Error al calcular el precio:', error);
+  }
+};
+
+export default twitterSlice.reducer;

@@ -1,17 +1,13 @@
-import { twitter } from '../Svgs/Twitter'
-import TwitterButtons from './TwitterButtons'
-import { face, faceFollow, share } from './TwitterSVG'
+import { useSelector } from 'react-redux';
+import TwitterServicesTable from './TwitterServicesTable'
+import { selectTwitterServices } from '../../pages/services/Hooks/serviciosTwitter';
 
 const TwitterComponent = () => {
+  const twitterServices = useSelector(selectTwitterServices);
   return (
     <div className='' id='twitter'>
-      <div className='p-1 justify-center flex mt-5'>
-        {twitter}
-      </div>
-      <div className='flex justify-center items-center flex-col'>
-        <TwitterButtons text={'Followers'} svg={faceFollow} />
-        <TwitterButtons text={'Re-tweets'} svg={share} />
-        <TwitterButtons text={'Likes'} svg={face} />
+      <div className="mt-5">
+        <TwitterServicesTable services={twitterServices} />
       </div>
     </div>
   )
