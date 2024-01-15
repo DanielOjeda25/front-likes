@@ -9,6 +9,7 @@ import Youtube from "./pages/services/Youtube";
 import Preguntas from "./pages/faq";
 import ComprarInstagram from "./pages/services/ComprarInstagram";
 import Pagos from "./pages/Pagos";
+import ComprarFacebbok from "./pages/services/ComprarFacebook";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/services/facebook",
     element: <Facebook />
+  },
+  {
+    path: "/services/facebook/comprar/:serviceId",
+    element: <ComprarFacebbok />
   },
   {
     path: "/services/twitter",

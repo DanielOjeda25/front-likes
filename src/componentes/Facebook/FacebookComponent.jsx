@@ -1,17 +1,14 @@
-import { facebook } from '../Svgs/facebook'
-import { face, faceFollow, facePageFollow } from './FaceSVG'
-import FacebookButtons from './FacebookButtons'
+import { useSelector } from 'react-redux';
+import FacebookServicesTable from './FacebookServicesTable'
+import { selectFacebookServices } from '../../pages/services/Hooks/serviciosFacebook';
 
 const FacebookComponent = () => {
+  const facebookServices = useSelector(selectFacebookServices);
+
   return (
     <div className='' id='facebook'>
-      <div className='p-1 justify-center flex mt-5'>
-        {facebook}
-      </div>
-      <div className='flex justify-center items-center flex-col'>
-        <FacebookButtons text={'Followers'} svg={faceFollow} />
-        <FacebookButtons text={'Likes'} svg={face} />
-        <FacebookButtons text={'Pages Likes'} svg={facePageFollow} />
+      <div className="mt-5">
+        <FacebookServicesTable services={facebookServices} />
       </div>
     </div>
   )

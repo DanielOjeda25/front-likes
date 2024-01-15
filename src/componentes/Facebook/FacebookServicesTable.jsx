@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { selectService } from "./Hooks/InstagramSlice";
+import { selectService } from "../Instagram/Hooks/InstagramSlice";
 import { useNavigate } from "react-router-dom";
 
-const InstagramServicesTable = ({ services }) => {
+const FacebookServicesTable = ({ services }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -18,13 +18,13 @@ const InstagramServicesTable = ({ services }) => {
 
   const handleBuyClick = (serviceId) => {
     dispatch(selectService(serviceId));
-    navigate(`/services/instagram/comprar/${serviceId}`);
+    navigate(`/services/facebook/comprar/${serviceId}`);
   };
   return (
     <div className="container mx-auto mt-8" id='tabla'>
       <input
         type="text"
-        placeholder="Example 'Instagram Likes'"
+        placeholder="Example 'Facebook Likes'"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="my-4 p-2 border border-gray-300 rounded w-full text-lg focus:outline-none focus:border-blue-500"
@@ -63,4 +63,4 @@ const InstagramServicesTable = ({ services }) => {
     </div>
   );
 };
-export default InstagramServicesTable
+export default FacebookServicesTable
