@@ -1,17 +1,14 @@
-import { youtube } from '../Svgs/Youtube'
-import YoutubeButtons from './YoutubeButtons'
-import { face, faceFollow, view } from './YoutubeSVG'
+import { useSelector } from 'react-redux';
+import { selectYouTubeServices } from '../../pages/services/Hooks/serviciosYoutube';
+import YoutubeServicesTable from './YoutubeServicesTable';
 
 const YoutubeComponent = () => {
+  const youtubeServices = useSelector(selectYouTubeServices);
+
   return (
     <div className='' id='youtube'>
-      <div className='p-1 justify-center flex mt-5'>
-        {youtube}
-      </div>
-      <div className='flex justify-center items-center flex-col'>
-        <YoutubeButtons text={'Subscribers'} svg={faceFollow} />
-        <YoutubeButtons text={'Views'} svg={view} />
-        <YoutubeButtons text={'Likes'} svg={face} />
+      <div className="mt-5">
+        <YoutubeServicesTable services={youtubeServices} />
       </div>
     </div>
   )

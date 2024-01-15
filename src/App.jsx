@@ -10,6 +10,7 @@ import Preguntas from "./pages/faq";
 import ComprarInstagram from "./pages/services/ComprarInstagram";
 import Pagos from "./pages/Pagos";
 import ComprarFacebbok from "./pages/services/ComprarFacebook";
+import ComprarYoutube from "./pages/services/ComprarYoutube";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/services/youtube",
     element: <Youtube />
+  },
+  {
+    path: "/services/youtube/comprar/:serviceId",
+    element: <ComprarYoutube />
   },
   {
     path: "/pagos",
