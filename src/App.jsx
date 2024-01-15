@@ -8,6 +8,7 @@ import Twitter from "./pages/services/Twitter";
 import Youtube from "./pages/services/Youtube";
 import Preguntas from "./pages/faq";
 import ComprarInstagram from "./pages/services/ComprarInstagram";
+import Pagos from "./pages/Pagos";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
     path: "/services/youtube",
     element: <Youtube />
   },
+  {
+    path: "/pagos",
+    element: <Pagos />
+  }
 ]);
 
 export default router;

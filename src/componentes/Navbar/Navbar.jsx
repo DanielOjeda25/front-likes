@@ -15,6 +15,7 @@ const Navbar = () => {
       facebook: 'Facebook',
       faq: 'Preguntas frecuentes',
       contact: 'Contacto',
+      ordenes: 'Órdenes de pago'
     },
     en: {
       home: 'Home',
@@ -25,6 +26,7 @@ const Navbar = () => {
       facebook: 'Facebook',
       faq: 'FAQ',
       contact: 'Contact',
+      ordenes: 'Payment orders'
     },
     // Agrega más idiomas según sea necesario
   };
@@ -154,7 +156,12 @@ const Navbar = () => {
                 {translation.contact}
               </NavLink>
             </li>
-            <LanguageSelector />
+            <li>
+              <NavLink to="/pagos">
+                {translation.ordenes}
+              </NavLink>
+            </li>
+            {/* <LanguageSelector /> */}
           </ul>
         </div>
       </div>
