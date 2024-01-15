@@ -11,14 +11,18 @@ const VerOrdenes = () => {
   };
 
   const formatCreatedAt = (createdAt) => {
-    const [datePart, timePart] = createdAt.split(' ');
-    const [day, month, year] = datePart.split('-');
-    const [hours, minutes, seconds] = timePart.split(':');
+    if (createdAt) {
+      const [datePart, timePart] = createdAt.split(' ');
+      const [day, month, year] = datePart.split('-');
+      const [hours, minutes, seconds] = timePart.split(':');
 
-    const formattedDate = `${padWithZero(day)}/${padWithZero(month)}/${year}`;
-    const formattedTime = `${padWithZero(hours)}:${padWithZero(minutes)} hs`;
+      const formattedDate = `${padWithZero(day)}/${padWithZero(month)}/${year}`;
+      const formattedTime = `${padWithZero(hours)}:${padWithZero(minutes)} hs`;
 
-    return `${formattedDate} - ${formattedTime}`;
+      return `${formattedDate} - ${formattedTime}`;
+    } else {
+      return 'Unknown Date and Time';
+    }
   };
 
   const padWithZero = (number) => {
@@ -80,7 +84,8 @@ const VerOrdenes = () => {
             <span className="font-semibold">Status:</span> {result[0]?.statusPayment}
           </p>
           <p>
-            <span className="font-semibold">Created:</span> {formatCreatedAt(result[0]?.created_at)}
+            <span className="font-semibold">Created:</span> {formatCreatedAt(result[0]?.created_at) || ''}
+
           </p>
         </div>
       )}
