@@ -46,7 +46,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/faq" className="hover:underline me-4 md:me-6">
+              <a href="/preguntas" className="hover:underline me-4 md:me-6">
                 {translation.faq}
               </a>
             </li>

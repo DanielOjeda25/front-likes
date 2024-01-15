@@ -6,12 +6,12 @@ import Instagram from "./pages/services/Instagram";
 import Facebook from "./pages/services/Facebook";
 import Twitter from "./pages/services/Twitter";
 import Youtube from "./pages/services/Youtube";
-import Preguntas from "./pages/faq";
 import ComprarInstagram from "./pages/services/ComprarInstagram";
 import Pagos from "./pages/Pagos";
 import ComprarFacebbok from "./pages/services/ComprarFacebook";
 import ComprarYoutube from "./pages/services/ComprarYoutube";
 import ComprarTwitter from "./pages/services/ComprarTwitter";
+import PreguntasFrecuentes from "./pages/PreguntasFrecuentes";
 
 const router = createBrowserRouter([
   {
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
     element: <Blog />
   },
   {
-    path: "/faq",
-    element: <Preguntas />
+    path: "/preguntas",
+    element: <PreguntasFrecuentes />
   },
   {
     path: "/contact",

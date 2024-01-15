@@ -3,7 +3,7 @@ import Footer from '../componentes/Footer/Footer'
 import HeaderFAQ from '../componentes/Header/HeaderFAQ'
 import Navbar from '../componentes/Navbar/Navbar'
 
-const Faq = () => {
+const PreguntasFrecuentes = () => {
   return (
     <div className='w-full'>
       <Navbar />
@@ -18,4 +18,4 @@ const Faq = () => {
   )
 }
 
-export default Faq
+export default PreguntasFrecuentes

@@ -147,7 +147,7 @@ const Navbar = () => {
               </NavLink>
             </li> */}
             <li>
-              <NavLink to="/faq">
+              <NavLink to="/preguntas">
                 {translation.faq}
               </NavLink>
             </li>
