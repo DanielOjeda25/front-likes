@@ -8,8 +8,10 @@ const ComprarInstagram = () => {
   return (
     <div className='w-full '>
       <Navbar />
-      <div className="flex flex-col items-center w-full">
+      <div className="flex flex-col items-center w-full  h-screen">
         <InstagramComprar service={serviceId} />
+      </div>
+      <div className=''>
         <Footer />
       </div>
     </div>

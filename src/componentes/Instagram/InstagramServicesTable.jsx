@@ -7,8 +7,6 @@ const InstagramServicesTable = ({ services }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const selectedService = useSelector(selectSelectedService);
-
   const filteredServices = services.filter(service =>
     service.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -34,10 +32,10 @@ const InstagramServicesTable = ({ services }) => {
         <table className="min-w-full bg-white border border-gray-300 shadow-md rounded-md overflow-hidden">
           <thead className="bg-blue-500 text-white">
             <tr>
-              <th className="py-3 px-4 border-b">Nombre</th>
-              <th className="py-3 px-4 border-b">Tarifa</th>
-              <th className="py-3 px-4 border-b">Mínimo</th>
-              <th className="py-3 px-4 border-b">Máximo</th>
+              <th className="py-3 px-4 border-b">Name</th>
+              <th className="py-3 px-4 border-b">Fee</th>
+              <th className="py-3 px-4 border-b">Min</th>
+              <th className="py-3 px-4 border-b">Max</th>
               <th className="py-3 px-4 border-b"></th>
             </tr>
           </thead>

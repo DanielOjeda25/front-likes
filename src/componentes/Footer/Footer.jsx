@@ -31,7 +31,7 @@ const Footer = () => {
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
             <img
-              src="/vite.svg"
+              src="/smm.ico"
               className="h-8"
               alt="logo"
             />
