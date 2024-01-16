@@ -61,7 +61,6 @@ const TwitterComprar = ({ service }) => {
             link: contactInfo.socialMedia,
           },
         };
-
         const response = await axios.post(API_COMPRAR, requestData);
 
         setResult(response.data)
@@ -79,6 +78,7 @@ const TwitterComprar = ({ service }) => {
         });
         window.open(response.data.sandboxInitPoint, '_blank');
       } catch (error) {
+        console.log(error);
         console.error('Error al realizar la compra:', error);
 
         // Muestra un mensaje de error usando SweetAlert2

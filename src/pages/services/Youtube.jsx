@@ -18,6 +18,8 @@ const Youtube = () => {
       <div className="flex flex-col items-center">
         <HeaderYouTube />
         <YoutubeComponent />
+      </div>
+      <div className=''>
         <Footer />
       </div>
     </div>

@@ -10,3 +10,9 @@
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
+
+.Footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

@@ -7,7 +7,7 @@ const InstagramComponent = () => {
 
   return (
     <div className='' id='instagram'>
-      <div className="mt-5">
+      <div className="mt-5 overflow-x-auto">
         <InstagramServicesTable services={instagramServices} />
       </div>
     </div>

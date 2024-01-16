@@ -21,16 +21,18 @@ const FacebookServicesTable = ({ services }) => {
     navigate(`/services/facebook/comprar/${serviceId}`);
   };
   return (
-    <div className="container mx-auto mt-8" id='tabla'>
-      <input
-        type="text"
-        placeholder="Example 'Facebook Likes'"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="my-4 p-2 border border-gray-300 rounded w-full text-lg focus:outline-none focus:border-blue-500"
-      />
+    <div className="container mx-auto mt-8  overflow-x-auto" id='tabla'>
+      <div className="flex justify-center">
+        <input
+          type="text"
+          placeholder="Example 'Facebook Likes'"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="my-4 p-2 border border-gray-300 rounded w-1/2 text-lg focus:outline-none focus:border-blue-500"
+        />
+      </div>
       <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-300 shadow-md rounded-md overflow-hidden">
+        <table className=" bg-white border border-gray-300 shadow-md rounded-md">
           <thead className="bg-blue-500 text-white">
             <tr>
               <th className="py-3 px-4 border-b">Name</th>
@@ -42,19 +44,22 @@ const FacebookServicesTable = ({ services }) => {
           </thead>
           <tbody>
             {filteredServices.map((service) => (
-              <tr key={service.service} className="hover:bg-gray-100 transition duration-300">
-                <td className="py-2 px-4 border-b">{cleanServiceName(service.name)}</td>
-                <td className="py-2 px-4 border-b">{service.rate}</td>
-                <td className="py-2 px-4 border-b">{service.min}</td>
-                <td className="py-2 px-4 border-b">{service.max}</td>
-                <td className="py-2 px-4 border-b">
+              <tr
+                key={service.service}
+                className="hover:bg-gray-100 transition duration-300"
+              >
+                <td className="py-2 px-2 border-b text-balance">
+                  {cleanServiceName(service.name)}{" "}
                   <button
-                    className="bg-green-500 text-white px-3 py-1 rounded-md focus:outline-none"
+                    className="bg-green-500 text-white px-4 py-1 rounded focus:outline-none"
                     onClick={() => handleBuyClick(service.service)}
                   >
                     Buy
                   </button>
                 </td>
+                <td className="py-2 px-4 border-b">{service.rate}</td>
+                <td className="py-2 px-4 border-b">{service.min}</td>
+                <td className="py-2 px-4 border-b">{service.max}</td>
               </tr>
             ))}
           </tbody>

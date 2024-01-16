@@ -14,11 +14,13 @@ const Instagram = () => {
   }, [dispatch]);
 
   return (
-    <div className='w-full '>
+    <div className='w-full min-h-screen flex flex-col'>
       <Navbar />
-      <div className="flex flex-col items-center w-full overflow-x-auto ">
+      <div className="flex flex-col items-center flex-grow">
         <HeaderInstagram />
         <InstagramComponent />
+      </div>
+      <div className='mt-auto'>
         <Footer />
       </div>
     </div>
