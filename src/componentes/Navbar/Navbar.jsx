@@ -141,11 +141,6 @@ const Navbar = () => {
                 </ul>
               </div>
             </li>
-            {/*  <li>
-              <NavLink to="/blog">
-                Blog
-              </NavLink>
-            </li> */}
             <li>
               <NavLink to="/preguntas">
                 {translation.faq}

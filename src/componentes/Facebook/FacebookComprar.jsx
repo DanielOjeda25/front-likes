@@ -142,7 +142,7 @@ const FacebookComprar = ({ service }) => {
           </div>
           <button
             type="submit"
-            className="bg-white text-green-500 hover:bg-green-500 hover:text-white border px-4 py-2 rounded-md focus:outline-none w-full md:w-auto"
+            className="bg-white text-green-500 hover:bg-green-500 hover:text-white border px-4 py-2 rounded-md focus:outline-none w-full"
           >
             Buy
           </button>
