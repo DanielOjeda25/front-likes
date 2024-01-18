@@ -14,7 +14,7 @@ const InstagramComprar = ({ service }) => {
   const [contactInfo, setContactInfo] = useState({
     email: '',
     socialMedia: '',
-    quantity: '', // Cambiado de 'link' a 'quantity'
+    quantity: '',
   });
 
   const handleCantidadChange = (e) => {
@@ -76,7 +76,6 @@ const InstagramComprar = ({ service }) => {
           text: 'Purchase made now proceed with payment. ',
           icon: 'success',
         });
-        window.open(response.data.sandboxInitPoint, '_blank');
       } catch (error) {
         console.error('Error al realizar la compra:', error);
 
@@ -148,7 +147,7 @@ const InstagramComprar = ({ service }) => {
         </form>
         <div className='w-full  flex justify-center p-2'>
           {result !== null ? (
-            <a target='_blank' className="px-4 py-2 text-center w-full bg-green-400 hover:bg-green-700 rounded text-white" href={`${result.sandboxInitPoint}`} rel="noreferrer" >Pay Purchase</a>
+            <a className="px-4 py-2 text-center w-full bg-green-400 hover:bg-green-700 rounded text-white" href={`${result.sandboxInitPoint}`} rel="noreferrer" >Pay Purchase</a>
           ) : (
             null
           )}
