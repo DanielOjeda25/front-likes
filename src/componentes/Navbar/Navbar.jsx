@@ -156,7 +156,7 @@ const Navbar = () => {
                 {translation.ordenes}
               </NavLink>
             </li>
-            <LanguageSelector />
+            {/* <LanguageSelector /> */}
           </ul>
         </div>
       </div>

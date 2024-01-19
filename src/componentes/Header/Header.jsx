@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import video from '../../assets/connection_-_113385 (1080p).mp4'
+
 const Header = () => {
   const language = useSelector((state) => state.language);
   const isSpanish = language === 'es';
@@ -12,7 +13,7 @@ const Header = () => {
     ? '¡Desbloquea el poder de las redes sociales! En SMM Matrix, nos especializamos en estrategias que elevan tu presencia en línea, impulsan la participación y te ayudan a alcanzar nuevas alturas en el panorama digital.🚀'
     : 'Unlock the power of social media! At SMM Matrix, we specialize in strategies that elevate your online presence, drive engagement, and help you reach new heights in the digital landscape.🚀';
 
-  const buttonText = isSpanish ? 'Explora Nuestros Servicios' : 'Explore Our Services';
+  const buttonText = isSpanish ? 'Como Comprar' : 'How to boy';
 
   return (
     <header className='relative h-screen w-full'>
@@ -29,7 +30,7 @@ const Header = () => {
           {descriptionText}
         </p>
         <a
-          href="#services"
+          href="#howto"
           className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white hover:bg-red-800 hover:bg-opacity-30 rounded-full transition-all duration-300 ease-in-out border border-white "
         >
           {buttonText}

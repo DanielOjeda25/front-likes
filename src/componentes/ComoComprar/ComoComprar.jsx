@@ -1,9 +1,8 @@
-import React from 'react';
 import video from '../../assets/pexels-rostislav-uzunov-9629255 (1080p).mp4';
 
 const ComoComprar = () => {
   return (
-    <div className="relative h-screen w-full">
+    <div className="relative h-screen w-full" id='howto'>
       <video autoPlay muted loop className="object-cover w-full h-full absolute top-0 left-0 opacity-20">
         <source src={video} type="video/mp4" />
         Tu navegador no soporta la etiqueta de video.
