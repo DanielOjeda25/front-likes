@@ -1,7 +1,9 @@
+import ComoComprar from '../componentes/ComoComprar/ComoComprar'
 import Footer from '../componentes/Footer/Footer'
 import Header from '../componentes/Header/Header'
 import NavbarHome from '../componentes/Navbar/Navbar'
-import ServicesGrid from '../componentes/Services/ServicesGrid'
+import NuestrosServicios from '../componentes/NuestrosServicios/NuestrosServicios'
+import Referencias from '../componentes/Referentes/Referencias'
 
 const Home = () => {
   return (
@@ -9,7 +11,9 @@ const Home = () => {
       <NavbarHome />
       <div className="flex flex-col items-center">
         <Header />
-        <ServicesGrid />
+        <NuestrosServicios />
+        <ComoComprar />
+        <Referencias />
         <Footer />
       </div>
     </main>

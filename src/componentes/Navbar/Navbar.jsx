@@ -32,7 +32,7 @@ const Navbar = () => {
   };
   const translation = translations[language] || translations.en;
   return (
-    <nav id='home' className="bg-gray-900 text-white shadow-md">
+    <nav id='home' className="bg-gray-800 text-white shadow-md">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
