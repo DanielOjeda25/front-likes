@@ -20,7 +20,9 @@ const ComoComprar = () => {
           <ol className=" text-left pl-4 text-lg">
             <li className="mb-6">
               <span className="text-2xl font-semibold text-red-500 mr-2">1.</span>
-              Crece en la red social que desees. Elige algún servicio que cumpla tus requerimientos de nuestro amplio catálogo.
+              Crece en la red social que desees. Elige algún
+              <a href="#home" className='underline'> servicio </a>
+              que cumpla tus requerimientos de nuestro amplio catálogo.
             </li>
             <li className="mb-6">
               <span className="text-2xl font-semibold text-red-500 mr-2">2.</span>
