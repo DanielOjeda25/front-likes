@@ -20,7 +20,7 @@ const Footer = () => {
     // Agrega más idiomas según sea necesario
   };
 
-  const translation = translations[language] || translations.en; // Por defecto, usa inglés si el idioma no está definido
+  const translation = translations[language]
 
   return (
     <footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4 w-full">

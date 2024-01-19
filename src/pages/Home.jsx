@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <main className='w-full'>
       <NavbarHome />
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-full">
         <Header />
         <NuestrosServicios />
         <ComoComprar />

@@ -30,7 +30,7 @@ const Navbar = () => {
     },
     // Agrega más idiomas según sea necesario
   };
-  const translation = translations[language] || translations.en;
+  const translation = translations[language]
   return (
     <nav id='home' className="bg-gray-800 text-white shadow-md">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
